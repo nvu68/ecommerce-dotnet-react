@@ -106,8 +106,6 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
-// KÍCH HOẠT CORS
-app.UseCors("AllowAll");
 
 // Sử dụng Middleware tự chế để bắt lỗi
 app.UseMiddleware<ExceptionMiddleware>();
@@ -118,9 +116,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// 1. TẠM KHÓA HTTPS REDIRECTION ĐỂ TRÁNH LỖI VÒNG LẶP TRÊN RENDER
+// app.UseHttpsRedirection();
 
-app.UseCors("AllowReact");
+// 2. KÍCH HOẠT ĐÚNG 1 CÁI CORS "AllowAll" Ở ĐÂY (TRƯỚC AUTH)
+app.UseCors("AllowAll");
+
+// 3. AUTHENTICATION & AUTHORIZATION BẮT BUỘC NẰM SAU CORS
 app.UseAuthentication();
 app.UseAuthorization();
 
