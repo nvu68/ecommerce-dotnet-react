@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const API_BASE_URL = 'https://localhost:7188/api';
+const API_BASE_URL = 'https://ecommerce-dotnet-react-1.onrender.com/api';
 
 export default function Register() {
   const [formData, setFormData] = useState({ fullName: '', email: '', phone: '', otp: '', password: '', confirmPassword: '' });

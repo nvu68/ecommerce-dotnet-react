@@ -11,7 +11,7 @@ import {
   ResponsiveContainer, LineChart, Line 
 } from 'recharts';
 
-const API_BASE_URL = 'https://localhost:7188/api'; 
+const API_BASE_URL = 'https://ecommerce-dotnet-react-1.onrender.com/api'; 
 
 // ================= INTERFACES (CHUẨN HÓA) =================
 interface IProduct { id: string; name: string; price: number; oldPrice?: number; stockQuantity: number; imageUrl: string; isDeleted: boolean; description?: string; categoryId?: string; }

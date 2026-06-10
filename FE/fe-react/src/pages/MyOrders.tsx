@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Package, Eye, Clock, CheckCircle, Truck, XCircle, ChevronRight, X } from 'lucide-react';
 
-const API_BASE_URL = 'https://localhost:7188/api';
+const API_BASE_URL = 'https://ecommerce-dotnet-react-1.onrender.com/api';
 
 interface OrderItem { productId: string; productName: string; quantity: number; price: number; }
 interface Order { id: number | string; orderDate: string;  totalAmount: number; status: string; createdAt: string; shippingAddress: string; note: string; orderItems?: OrderItem[]; }

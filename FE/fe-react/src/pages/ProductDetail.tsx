@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { ShoppingCart, Minus, Plus, ArrowLeft, ShieldCheck, Truck, Zap, Loader2 } from 'lucide-react';
 
-const API_BASE_URL = 'https://localhost:7188/api';
+const API_BASE_URL = 'https://ecommerce-dotnet-react-1.onrender.com/api';
 
 interface Product {
   id: string;

@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import { useWishlist } from '../store/WishlistContext';
 
-const API_BASE_URL = 'https://localhost:7188/api';
+const API_BASE_URL = 'https://ecommerce-dotnet-react-1.onrender.com/api';
 
 interface Product { id: string; name: string; price: number; description: string; imageUrl: string; categoryId?: string; oldPrice?: number; tags?: string[]; brand?: string; rating?: number; reviews?: number;}
 interface Category { id: string; name: string; }

@@ -11,7 +11,7 @@ export default function Login() {
       e.preventDefault();
       setIsLoading(true);
       try {
-        const response = await axios.post('https://localhost:7188/api/Auth/login', {
+        const response = await axios.post('https://ecommerce-dotnet-react-1.onrender.com/api/Auth/login', {
           email: username,
           password: password
         });

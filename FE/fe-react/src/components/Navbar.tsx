@@ -2,7 +2,7 @@ import { ShoppingCart, User, Search, Zap, Package, LogOut } from 'lucide-react';
 import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 
-const API_BASE_URL = 'https://localhost:7188/api';
+const API_BASE_URL = 'https://ecommerce-dotnet-react-1.onrender.com/api';
 
 interface CartItemInfo {
   quantity: number;
