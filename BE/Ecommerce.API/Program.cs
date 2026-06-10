@@ -94,7 +94,20 @@ builder.Services.AddCors(options =>
     });
 });
 
+// ĐĂNG KÝ CORS CHO PHÉP FE GỌI API
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
+// KÍCH HOẠT CORS
+app.UseCors("AllowAll");
 
 // Sử dụng Middleware tự chế để bắt lỗi
 app.UseMiddleware<ExceptionMiddleware>();
