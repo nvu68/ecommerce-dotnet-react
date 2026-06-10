@@ -1,0 +1,16 @@
+# === C# / ASP.NET Core ===
+bin/
+obj/
+.vs/
+*.user
+appsettings.Development.json
+
+# === ReactJS / Frontend ===
+node_modules/
+dist/
+build/
+.env
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
